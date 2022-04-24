@@ -1,4 +1,4 @@
-name: Publish release to Docker Hub
+name: Build and push Docker image from a new release
 
 on:
   push:
@@ -38,8 +38,5 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          platforms: linux/amd64
+          platforms: linux/amd64, linux/arm/v7
           tags: ${{ steps.meta.outputs.tags }}
-
-      - name: Image digest
-        run: echo ${{ steps.docker_build.outputs.digest }}
