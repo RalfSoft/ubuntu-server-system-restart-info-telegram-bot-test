@@ -1,6 +1,6 @@
 services:
   bot:
-    image: sonn567/ubuntu-server-system-restart-info-telegram-bot:latest
+    build: ./
     restart: always
     volumes: 
       - /var/run:/var/bot/run/

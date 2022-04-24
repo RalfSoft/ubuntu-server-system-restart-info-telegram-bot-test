@@ -2,7 +2,7 @@ FROM python:3.9-alpine
 
 RUN apk update && apk upgrade
 RUN apk add build-base
-#RUN python3.9 -m pip install --upgrade pip
+RUN python3.9 -m pip install --upgrade pip
 
 COPY bot.py /bot/bot.py
 COPY entrypoint.sh /entrypoint.sh
