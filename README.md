@@ -1,4 +1,4 @@
-# Ubuntu server system restart info with a telegram-bot
+# Ubuntu server system restart info with a telegram-bot (ONLY TESTS IN THIS REPO)
 
 This will check on your ubuntu server if a reboot is required and sends you a telegram message.
 To start use the **docker-compose.yml** file.
