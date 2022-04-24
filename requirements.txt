@@ -1,0 +1,2 @@
+python-telegram-bot # I used 16.6
+requests # I used 2.25.1

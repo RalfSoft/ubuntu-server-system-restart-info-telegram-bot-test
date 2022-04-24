@@ -1,0 +1,10 @@
+services:
+  bot:
+    image: sonn567/ubuntu-server-system-restart-info-telegram-bot:latest
+    restart: always
+    volumes: 
+      - /var/run:/var/bot/run/
+    environment: 
+      - TELEGRAM_BOT_API_KEY=YOUR_TELEGRAM_BOT_API_KEY
+      - TELEGRAM_CHAT_ID=YOUR_TELEGRAM_CHAT_ID
+      - SLEEP_CHECK_REBOOT_REQUIRED=86400
