@@ -12,6 +12,10 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    env:
+      TELEGRAM_BOT_API_KEY: "1"
+      TELEGRAM_CHAT_ID: 1
+      SLEEP_CHECK_REBOOT_REQUIRED: 3600
     strategy:
       fail-fast: false
       matrix:
