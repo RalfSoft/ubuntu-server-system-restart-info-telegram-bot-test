@@ -6,6 +6,9 @@ API_KEY = str(os.getenv('TELEGRAM_BOT_API_KEY'))
 CHAT_ID = os.getenv('TELEGRAM_CHAT_ID')
 SLEEP_CHECK_REBOOT_REQUIRED = int(os.getenv('SLEEP_CHECK_REBOOT_REQUIRED'))
 
+def test():
+    return "test"
+
 #Check if the Telegram API-Key is valid (make sure that Token isn't used by another script)
 def check_API_KEY():
     api_url = 'https://api.telegram.org/bot' + API_KEY + '/getUpdates'
