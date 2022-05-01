@@ -1,9 +1,10 @@
-name: Build and push Docker image from a new release
+name: Build and push Docker image if TelegramBot tests complete successfully
 
 on:
-  push:
-    tags:
-      - "v*.*.*"
+  workflow_run:
+    workflows: ["TelegramBot tests"]
+    types:
+      - completed
 
 jobs:
   docker:
@@ -48,5 +49,5 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          platforms: linux/arm/v8
+          platforms: linux/arm/v6, linux/arm/v7, linux/arm/v8, linux/arm64. linux/amd64
           tags: ${{ steps.meta.outputs.tags }}
