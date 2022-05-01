@@ -83,3 +83,5 @@ jobs:
           push: true
           platforms: linux/arm/v6, linux/arm/v7, linux/arm/v8, linux/arm64, linux/amd64
           tags: ${{ steps.meta.outputs.tags }}
+          cache-from: type=registry,ref=sonn567/ubuntu-server-system-restart-info-telegram-bot-test:latest
+          cache-to: type=inline
