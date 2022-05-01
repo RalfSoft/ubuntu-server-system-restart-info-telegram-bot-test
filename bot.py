@@ -9,7 +9,7 @@ SLEEP_CHECK_REBOOT_REQUIRED = int(os.getenv('SLEEP_CHECK_REBOOT_REQUIRED'))
 def test():
     return "test"
 
-#Check if the Telegram API-Key is valid (make sure that Token isn't used by another script)
+# Check if the Telegram API-Key is valid (make sure that Token isn't used by another script)
 def check_API_KEY():
     api_url = 'https://api.telegram.org/bot' + API_KEY + '/getUpdates'
     response = requests.get(api_url, verify=True)
