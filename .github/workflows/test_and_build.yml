@@ -81,7 +81,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          platforms: linux/arm/v6, linux/arm/v7, linux/arm/v8, linux/arm64, linux/amd64
+          platforms: linux/arm/v6, linux/arm/v7, linux/arm64/v8, linux/arm64, linux/amd64
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=registry,ref=sonn567/ubuntu-server-system-restart-info-telegram-bot-test:latest
